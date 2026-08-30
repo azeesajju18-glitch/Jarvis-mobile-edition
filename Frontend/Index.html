@@ -3,89 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J.A.R.V.I.S. Mobile Edition</title>
+    <meta name="theme-color" content="#02070a">
+    <title>J.A.R.V.I.S. | Mobile Edition</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="app">
+<div class="app">
 
-        <!-- Header -->
-        <header>
-            <div class="brand">
-                <div class="logo">J</div>
-                <div>
-                    <h1>J.A.R.V.I.S.</h1>
-                    <p>MOBILE EDITION</p>
-                </div>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo">
+                <span>J</span>
             </div>
 
-            <div class="status">
-                <span></span> ONLINE
+            <div>
+                <h1>J.A.R.V.I.S.</h1>
+                <p>MOBILE INTELLIGENCE SYSTEM</p>
             </div>
-        </header>
+        </div>
 
-        <!-- Arc Reactor -->
-        <section class="reactor-section">
+        <div class="online">
+            <i></i>
+            ONLINE
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
             <div class="reactor">
-                <div class="ring ring-1"></div>
-                <div class="ring ring-2"></div>
-                <div class="ring ring-3"></div>
-                <div class="core">
-                    <span>J</span>
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+                <div class="reactor-core">
+                    <div class="core-inner">J</div>
                 </div>
+
             </div>
 
             <h2>SYSTEMS ONLINE</h2>
-            <p>All J.A.R.V.I.S. systems are operational.</p>
-        </section>
-
-        <!-- System Cards -->
-        <section class="systems">
-
-            <div class="system-card">
-                <span>⚡</span>
-                <div>
-                    <strong>CORE SYSTEM</strong>
-                    <small>Operational</small>
-                </div>
-            </div>
-
-            <div class="system-card">
-                <span>🧠</span>
-                <div>
-                    <strong>AI ENGINE</strong>
-                    <small>Ready</small>
-                </div>
-            </div>
-
-            <div class="system-card">
-                <span>🛡️</span>
-                <div>
-                    <strong>SECURITY</strong>
-                    <small>Protected</small>
-                </div>
-            </div>
+            <p>All primary systems are operational.</p>
 
         </section>
 
-        <!-- Chat -->
-        <section class="chat-section">
 
-            <div class="section-title">
-                <span>J.A.R.V.I.S. CONSOLE</span>
-                <span class="live">● LIVE</span>
+        <!-- SYSTEM STATUS -->
+        <section class="status-grid">
+
+            <div class="status-card">
+                <div class="status-icon">⚡</div>
+                <div>
+                    <span>CORE</span>
+                    <strong>ONLINE</strong>
+                </div>
+                <b></b>
             </div>
 
-            <div id="chat">
-                <div class="msg ai">
-                    J.A.R.V.I.S: Systems online. How may I assist you, Boss?
+            <div class="status-card">
+                <div class="status-icon">🧠</div>
+                <div>
+                    <span>AI ENGINE</span>
+                    <strong>READY</strong>
+                </div>
+                <b></b>
+            </div>
+
+            <div class="status-card">
+                <div class="status-icon">🛡</div>
+                <div>
+                    <span>SECURITY</span>
+                    <strong>ACTIVE</strong>
+                </div>
+                <b></b>
+            </div>
+
+            <div class="status-card">
+                <div class="status-icon">🌐</div>
+                <div>
+                    <span>NETWORK</span>
+                    <strong>CONNECTED</strong>
+                </div>
+                <b></b>
+            </div>
+
+        </section>
+
+
+        <!-- QUICK COMMANDS -->
+        <section class="commands">
+
+            <div class="section-header">
+                <span>QUICK COMMANDS</span>
+                <small>READY</small>
+            </div>
+
+            <div class="command-grid">
+
+                <button class="command" data-command="System status">
+                    <span>◉</span>
+                    STATUS
+                </button>
+
+                <button class="command" data-command="Run system diagnostics">
+                    <span>⚙</span>
+                    DIAGNOSTICS
+                </button>
+
+                <button class="command" data-command="Tell me the time">
+                    <span>◷</span>
+                    TIME
+                </button>
+
+                <button class="command" data-command="Who are you">
+                    <span>◇</span>
+                    J.A.R.V.I.S.
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAT -->
+        <section class="console">
+
+            <div class="console-header">
+                <div>
+                    <span class="console-title">J.A.R.V.I.S. CONSOLE</span>
+                    <span class="console-subtitle">LOCAL FRONTEND MODE</span>
+                </div>
+
+                <div class="live">
+                    <i></i> LIVE
                 </div>
             </div>
 
-            <div class="input-area">
+
+            <div id="chat" class="chat">
+
+                <div class="message ai">
+                    <span class="sender">J.A.R.V.I.S.</span>
+                    Systems online. How may I assist you, Boss?
+                </div>
+
+            </div>
+
+
+            <div class="typing" id="typing">
+                J.A.R.V.I.S. is processing...
+            </div>
+
+
+            <div class="input-box">
+
                 <input
                     id="msg"
                     type="text"
@@ -93,17 +176,26 @@
                     autocomplete="off"
                 >
 
-                <button id="send">➤</button>
+                <button id="send" aria-label="Send">
+                    ➤
+                </button>
+
             </div>
 
         </section>
 
-        <footer>
-            J.A.R.V.I.S. MOBILE EDITION
-        </footer>
+    </main>
 
-    </div>
 
-    <script src="script.js"></script>
+    <!-- FOOTER -->
+    <footer>
+        <span>J.A.R.V.I.S. MOBILE EDITION</span>
+        <span>FRONTEND SYSTEM v2.0</span>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
